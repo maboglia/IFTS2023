@@ -31,3 +31,5 @@ Repo del corso Java avanzato IFTS 2023
 * [Java trail Oracle - TOC](http://www.bogliaccino.it/teaching/slideshow.php?parameter=https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/programma-macro/100_Programma_Oracle.md)
 * [Classi: il tipo, il progetto dell'oggetto](http://www.bogliaccino.it/teaching/slideshow.php?parameter=https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/010_classi.md)
 * [Oggetti: le istanze, gli esemplari delle classi](http://www.bogliaccino.it/teaching/slideshow.php?parameter=https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/010_2_classi_istanze.md)
+
+* [questionario](https://docs.google.com/forms/d/e/1FAIpQLScbR8F9en4ulk6OiEbXA0rggtS_VHIxaVhu2f2RBb6Ddvck2g/viewform)
