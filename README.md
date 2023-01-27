@@ -1,25 +1,26 @@
 # IFTS2023
+
 Repo del corso Java avanzato IFTS 2023
 
-## Background
+## Java Building blocks: fondamenti Java
 
 * installazione dell'ambiente di sviluppo.
 * differenze tra JDK, JRE e java virtual machine
 * compilazione ed esecuzione del codice
-* i tipi di dati primitivi ( conversioni implicite ed esplicite)
-* variabili e costanti: nomi e tipi
-* operatori logici e aritmetici.
-* strutture di controllo (if - else/if- for -do - while)
-* array (con introduzione ai bidimensionli)
-* la programmazione ad oggetti: classi
-* classi predefinite: Stringhe, Scanner e Math
-* struttura delle classi le proprietà e metodi
-* costruttori
+* i [tipi di dati primitivi](https://github.com/maboglia/CorsoJava/blob/master/appunti/004_tipi.md) ( conversioni implicite ed [esplicite](https://github.com/maboglia/CorsoJava/blob/master/appunti/008_cast.md))
+* [variabili e costanti](https://github.com/maboglia/CorsoJava/blob/master/appunti/003_variabili.md): nomi e tipi
+* [operatori](https://github.com/maboglia/CorsoJava/blob/master/appunti/002_operatori.md) logici e aritmetici.
+* [strutture di controllo](https://github.com/maboglia/CorsoJava/blob/master/appunti/005_cicli.md) (if - else/if- for -do - while)
+* [array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md) (con introduzione ai bidimensionli)
+* la programmazione ad [oggetti](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_2_classi_istanze.md): [classi](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_classi.md)
+* classi predefinite: [Stringhe](https://github.com/maboglia/CorsoJava/blob/master/appunti/API_Java/021_API_Java_Stringhe.md), Scanner e [Math](https://github.com/maboglia/CorsoJava/blob/master/appunti/API_Java/021_java_lang_Math.md)
+* struttura delle [classi](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_1_classi_doppia_natura.md) le proprietà e metodi
+* [costruttori](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_3_classi_costruttori.md)
 * i metodi: struttura e richiamo
 * metodi void e quelli che ritornano valori
 * i metodi: array come parametri e che ritornano array
 * overload e override dei metodi
-* introduzione all'ereditarietà
+* introduzione all'[ereditarietà](https://github.com/maboglia/CorsoJava/blob/master/appunti/011_classi_ereditarieta.md)
 * prima classi ereditate e il costruttore delle superclassi.
 
 ## Programma Java
