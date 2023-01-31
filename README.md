@@ -2,6 +2,8 @@
 
 Repo del corso Java avanzato IFTS 2023
 
+Messaggio 
+
 ## Java Building blocks: fondamenti Java
 
 * installazione dell'ambiente di sviluppo.
