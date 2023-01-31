@@ -1,9 +1,9 @@
 package test;
 
 import model.Punto;
-import model.Segmento;
+import model.Triangolo;
 
-public class SegmentoTest {
+public class TriangoloTest {
 
 	public static void main(String[] args) {
 		
@@ -11,11 +11,9 @@ public class SegmentoTest {
 		Punto b = new Punto(7, 2);
 		Punto c = new Punto(3, 5);
 		
-		Segmento ab = new Segmento(a, b);
-		Segmento ac = new Segmento(a, c);
+		Triangolo t = new Triangolo(a, b, c);
 		
-		System.out.println(ab);
-		System.out.println(ac);
+		System.out.println(t); 
 
 	}
 
