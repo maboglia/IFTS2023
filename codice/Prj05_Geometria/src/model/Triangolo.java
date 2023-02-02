@@ -1,13 +1,13 @@
 package model;
 
-public class Triangolo {
+public class Triangolo extends FiguraGeometrica{
 
 	Punto a, b, c;
 	Segmento  ab, ac, bc;
-	double perimetro;
-	double superficie;
+
 	
 	public Triangolo(Punto a, Punto b, Punto c) {
+		super("Triangolo");
 		this.a = a;
 		this.b = b;
 		this.c = c;
@@ -32,11 +32,11 @@ public class Triangolo {
 				);
 	}
 
-	@Override
-	public String toString() {
-		return "Triangolo [a=" + a + ", b=" + b + ", c=" + c + ", ab=" + ab + ", ac=" + ac + ", bc=" + bc
-				+ ", perimetro=" + perimetro + ", superficie=" + superficie + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Triangolo [a=" + a + ", b=" + b + ", c=" + c + ", ab=" + ab + ", ac=" + ac + ", bc=" + bc
+//				+ ", perimetro=" + perimetro + ", superficie=" + superficie + "]";
+//	}
 
 	
 	

@@ -1,12 +1,11 @@
 package model;
 
-public class Rettangolo {
+public class Rettangolo extends FiguraGeometrica {
 
 	Segmento base, altezza;
-	double perimetro;
-	double superficie;
-	
+
 	public Rettangolo(Segmento base, Segmento altezza) {
+		super("rettangolo");
 		this.base = base;
 		this.altezza = altezza;
 		this.perimetro = calcolaPerimetro();
@@ -15,6 +14,7 @@ public class Rettangolo {
 	}
 	
 	public double calcolaSuperficie() {
+		System.out.println("Ho usato il calcolo del rettangolo");
 		return base.lunghezza * altezza.lunghezza;
 	}
 
@@ -22,11 +22,11 @@ public class Rettangolo {
 		return 2 * (base.lunghezza + altezza.lunghezza);
 	}
 
-	@Override
-	public String toString() {
-		return "Rettangolo [base=" + base + ", altezza=" + altezza + ", perimetro=" + perimetro + ", superficie="
-				+ superficie + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Rettangolo [base=" + base + ", altezza=" + altezza + ", perimetro=" + perimetro + ", superficie="
+//				+ superficie + "]";
+//	}
 	
 	
 	
