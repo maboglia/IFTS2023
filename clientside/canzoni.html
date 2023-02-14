@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Canzoni</h1>
+
+<table id="canzoni">
+    <tr>
+        <th>Titolo</th>
+        <th>Cantante</th>
+        <th>Anno</th>
+    </tr>
+
+
+</table>
+
+<script>
+
+    const TABELLA = document.getElementById('canzoni');
+    const URL = 'http://api.bogliaccino.it/public/canzoni.php';
+
+    fetch(URL)
+        .then(collezione => collezione.json())
+        .then(collezioneJS => {
+            
+            let riga = '';
+            for (const canzone of collezioneJS) {
+                riga += '<tr>' + '<td>' + canzone.titolo + '</td>'  + '<td>' + canzone.cantante + '</td>'  + '<td>' + canzone.anno + '</td>' + '</tr>';  
+                
+            }
+
+            TABELLA.innerHTML += riga;
+
+        })
+
+
+
+</script>
+</body>
+</html>
