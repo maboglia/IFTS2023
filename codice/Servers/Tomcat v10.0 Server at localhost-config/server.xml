@@ -134,7 +134,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Prj07_GestioneDipendenti2.0" path="/dipendenti" reloadable="true" source="org.eclipse.jst.jee.server:Prj07_GestioneDipendenti2.0"/><Context docBase="Prj08_SassoCartaForbici" path="/SassoCartaForbici" reloadable="true" source="org.eclipse.jst.jee.server:Prj08_SassoCartaForbici"/><Context docBase="Prj09_Canzoni" path="/Prj09_Canzoni" reloadable="true" source="org.eclipse.jst.jee.server:Prj09_Canzoni"/></Host>
+      <Context docBase="Prj07_GestioneDipendenti2.0" path="/dipendenti" reloadable="true" source="org.eclipse.jst.jee.server:Prj07_GestioneDipendenti2.0"/><Context docBase="Prj08_SassoCartaForbici" path="/SassoCartaForbici" reloadable="true" source="org.eclipse.jst.jee.server:Prj08_SassoCartaForbici"/><Context docBase="Prj09_Canzoni" path="/Prj09_Canzoni" reloadable="true" source="org.eclipse.jst.jee.server:Prj09_Canzoni"/><Context docBase="Prj10_BiglietteriaTeatri" path="/Prj10_BiglietteriaTeatri" reloadable="true" source="org.eclipse.jst.jee.server:Prj10_BiglietteriaTeatri"/></Host>
     </Engine>
   </Service>
 </Server>
