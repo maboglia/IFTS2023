@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+
+<script type="text/javascript">
+
+	const URL = "rock";
+
+	fetch(URL)
+		.then(canzoni => canzoni.json())
+		.then(canzoniJS => {
+			
+			const TABELLA = document.createElement("table");
+			
+			for (canzone of canzoniJS){
+			
+				const TR = document.createElement("tr");
+				
+				const TD1 = document.createElement("td");
+				TD1.textContent = canzone.canzone;
+				TR.appendChild(TD1);
+
+				const TD2 = document.createElement("td");
+				TD2.textContent = canzone.cantanti;
+				TR.appendChild(TD2);
+				
+				TABELLA.appendChild(TR);
+				//console.log(canzone)
+				
+			}
+			
+			document.body.appendChild(TABELLA)
+			
+			
+		})
+
+
+</script>
+
+</body>
+</html>
