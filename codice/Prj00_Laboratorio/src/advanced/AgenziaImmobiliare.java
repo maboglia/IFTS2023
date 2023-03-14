@@ -73,14 +73,7 @@ public class AgenziaImmobiliare {
 		}
 		
 		
-		Collections.sort(immobili, new Comparator<Casa>() {
-
-			@Override
-			public int compare(Casa primaCasa, Casa altraCasa) {
-				
-				return Double.compare(primaCasa.getSuperficie(), altraCasa.getSuperficie());
-			}
-		}); 
+		Collections.sort(immobili, (primaCasa, altraCasa) -> Double.compare(primaCasa.getSuperficie(), altraCasa.getSuperficie())); 
 		
 		System.out.println("---------LIST ordinata per superficie------------------");
 		
