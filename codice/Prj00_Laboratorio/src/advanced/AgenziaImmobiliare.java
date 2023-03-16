@@ -32,6 +32,7 @@ public class AgenziaImmobiliare {
 		
 		List<Casa> immobili = new LinkedList<>();
 		
+		//ciao ema
 		
 		Casa casa1 = new Casa();
 		casa1.setNome("Casa BLU");
