@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Libreria Super pippo</h1>
+
+	<h2>Libri disponibili</h2>
+	
+	<table>
+	  <tr>
+	    <th>Titolo</th>
+	    <th>Prezzo</th>
+	  </tr>
+	  <tr th:each="l : ${elencoLibri}">
+	    <td th:text="${l.titolo}">Row 1: Col 1</td>
+	    <td th:text="${l.prezzo}">Row 1: Col 2</td>
+	  </tr>
+	</table>
+
+	
+</body>
+</html>
