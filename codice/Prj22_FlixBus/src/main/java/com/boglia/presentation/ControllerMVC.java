@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.boglia.entities.Prenotazione;
 import com.boglia.services.ViaggiService;
 
 import jakarta.servlet.http.HttpSession;
@@ -41,7 +42,7 @@ public class ControllerMVC {
 		
 		m.addAttribute("titolo", "Elenco delle tratte disponibili");
 		
-		m.addAttribute("tratte", List.of("Torino-Roma", "Torino-Milano", "Torino-Napoli"));
+		m.addAttribute("tratte", service.getTratte());
 		
 		return "lista";
 	}
@@ -51,13 +52,17 @@ public class ControllerMVC {
 		
 		m.addAttribute("titolo", "Informazioni sul viaggio e prenotazione");
 		
+		m.addAttribute("viaggio", service.getTrattaById(id));
+		
 		return "prenota";
 	}
 
 	@GetMapping(value = {"conferma/{id}"})
 	public String conferma(@PathVariable int id,Model m) {
 		
-		m.addAttribute("titolo", "Conferma della prenotazione");		
+		m.addAttribute("titolo", "Conferma della prenotazione");
+		
+		m.addAttribute("dati", service.getPrenotazioneById(id));
 		
 		return "conferma";
 	}
@@ -66,6 +71,8 @@ public class ControllerMVC {
 	public String prenotazioni(Model m) {
 		
 		m.addAttribute("titolo", "Elenco delle prenotazioni");
+		
+		m.addAttribute("elenco", service.getPrenotazioni());
 		
 		return "prenotazioni";
 	}
@@ -85,4 +92,17 @@ public class ControllerMVC {
 		return "redirect:/";
 		
 	}
+	
+	
+	@PostMapping("conferma")
+	public String doConferma(Prenotazione p) {
+		System.out.println("metodo prenotazione confermata");
+		Prenotazione prenotazione=null;
+		if (p != null) {
+			prenotazione = service.addPrenotazione(p);
+		}
+		
+		return "redirect:conferma/"+prenotazione.getId();
+	}
+	
 }

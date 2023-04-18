@@ -9,6 +9,45 @@
 	
 	<h1 th:text="${titolo}">Segnaposto</h1>
 
+	<div th:object="${viaggio}">
+	
+		<h2 th:text="*{partenza}"></h2>
+		<h2 th:text="*{destinazione}"></h2>
+		
+		<h3 th:text="Durata + *{durata}"></h3>
+	
+	</div>
+	
+	<form th:action="@{/conferma}" method="post">
+	
+		<input type="hidden" name="tratta" th:value="${viaggio.id}">
+	
+		<div>
+			<label for="data">Data viaggio</label>
+			<input type="date" name="data">
+		</div>
+	
+		<div>
+			<label for="utente">Utente</label>
+			<input type="text" name="utente">
+		</div>
+	
+		<div>
+			<label for="posti">Numero Posti</label>
+			<input type="number" name="posti">
+		</div>
+	
+		<div>
+			<label for="prezzo">Prezzo</label>
+			<input type="number" name="prezzo">
+		</div>
+	
+		<div>
+			<input type="submit" value="Prenota">
+		
+		</div>
+	
+	</form>
 	
 </body>
 </html>

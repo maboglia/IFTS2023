@@ -11,7 +11,7 @@
 
 	<ul>
 	  <li th:each="tratta : ${tratte}" > 
-		<a href="#" th:href="@{prenota/1}" th:text="${tratta}"></a>
+		<a href="#" th:href="@{prenota/}+${tratta.id}" th:text="${tratta.partenza}+ ' - ' +${tratta.destinazione}"></a>
 	  </li>
 	</ul>
 

@@ -50,6 +50,18 @@ public class Tratta {
 	public void setDurata(double durata) {
 		this.durata = durata;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append(partenza);
+		builder.append(" - ");
+		
+		builder.append(destinazione);
+		builder.append(" durata: ");
+		builder.append(durata);
+		return builder.toString();
+	}
 	
 	
 

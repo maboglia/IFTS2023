@@ -9,6 +9,22 @@
 	
 	<h1 th:text="${titolo}">Segnaposto</h1>
 
+	<table>
+	  <tr>
+	    <th>Id</th>
+	    <th>Tratta</th>
+	    <th>Utente</th>
+	    <th>Posti</th>
+	  </tr>
+	  <tr th:each="p : ${elenco}">
+	    <td th:text="${p.id}">Row 1: Col 1</td>
+	    <td th:text="${p.tratta}">Row 1: Col 2</td>
+	    <td th:text="${p.utente}">Row 1: Col 1</td>
+	    <td th:text="${p.posti}">Row 1: Col 1</td>
+	  </tr>
+	</table>
+
+
 	
 </body>
 </html>
