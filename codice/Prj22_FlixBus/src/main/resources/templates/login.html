@@ -7,6 +7,15 @@
 </head>
 <body>
 	
+	<nav
+		th:fragment="navigazione"
+	>
+		<a th:href="@{/login}">home</a> 
+		<a th:href="@{/lista}">lista</a> 
+		<a th:href="@{/prenotazioni}">prenotazioni</a> 
+	
+	</nav>
+	
 	<h1 th:text="${titolo}">Segnaposto</h1>
 	
 	<form th:action="@{login}" method="post">
