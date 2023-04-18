@@ -1,5 +1,8 @@
 package com.boglia.presentation;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,13 +11,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.boglia.services.ViaggiService;
+
 import jakarta.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("")
 public class ControllerMVC {
 
-	//collegare il service
+	@Autowired
+	private ViaggiService service;
+	
 	
 	@GetMapping(value = {"index", "login", "/"})
 	public String home(Model m, HttpSession session  ) {
@@ -33,6 +40,8 @@ public class ControllerMVC {
 	public String lista(Model m) {
 		
 		m.addAttribute("titolo", "Elenco delle tratte disponibili");
+		
+		m.addAttribute("tratte", List.of("Torino-Roma", "Torino-Milano", "Torino-Napoli"));
 		
 		return "lista";
 	}
@@ -65,8 +74,8 @@ public class ControllerMVC {
 	public String doLogin(@RequestParam(name = "username") String username,
 			@RequestParam(name = "password") String password, HttpSession session ) {
 		
-		System.out.println(username);
-		System.out.println(password);
+//		System.out.println(username);
+//		System.out.println(password);
 		
 		if (username.equals("mauro") && password.equals("12345") ) {
 			session.setAttribute("loggato", "mauro");

@@ -9,6 +9,13 @@
 	
 	<h1 th:text="${titolo}">Segnaposto</h1>
 
+	<ul>
+	  <li th:each="tratta : ${tratte}" > 
+		<a href="#" th:href="@{prenota/1}" th:text="${tratta}"></a>
+	  </li>
+	</ul>
+
+
 	
 </body>
 </html>
