@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>FlixBus</title>
+<link rel="stylesheet" type="text/css" href="" th:href="@{/css/style.css}">
+</head>
+<body>
+	
+	<h1 th:text="${titolo}">Segnaposto</h1>
+	
+	<form th:action="@{login}" method="post">
+	
+		<div>
+			<label for="username">Username</label>
+			<input type="text" name="username">
+		</div>
+
+		<div>
+			<label for="password">Password</label>
+			<input type="password" name="password">
+		</div>
+
+		<div>
+			<input type="submit" value="registrati">
+			<input type="submit" value="login">
+		</div>
+	
+	
+	
+	</form>
+	
+</body>
+</html>
